@@ -1,0 +1,19 @@
+{
+  "name": "clon_pinterest",
+  "version": "1.0.0",
+  "description": "Maquetar la interfaz de Pinterest",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server"
+  },
+  "keywords": [
+    "HTML",
+    "CSS"
+  ],
+  "author": "Juan Galvis <juangalvis.sh@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
