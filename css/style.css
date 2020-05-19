@@ -7,6 +7,7 @@ body
 header
 {
     position: relative;
+    margin-top: 0;
 }
 
 .Barra
@@ -16,22 +17,28 @@ header
     grid-template-columns: 20% 60% 20%;
     width: 100%;
     justify-content: space-between;
+    background-color: white;
+    z-index: 1;
 }
 
 .Barra__Menu a
 {
-    color: black;
     font-weight: bold;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.actual
+.Barra__Menu--Active
 {
-    color: white;
     background-color: #000;
-    padding: 10px 5px;
+    padding: 17px 19px;
     border-radius: 30px;
+    color: white;
+}
+
+.Barra__Menu--Active a
+{
+    color: #FFF;
 }
 
 .Barra__Menu, .Barra__icons
@@ -40,6 +47,13 @@ header
     background-color: white;
     list-style: none;
     align-items: center;
+}
+
+.Barra__icons img:hover
+{
+    border-radius: 100%;
+    background-color: #efefef;
+    box-sizing: border-box;
 }
 
 .Barra__Menu img
@@ -53,12 +67,27 @@ header
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+}
+
+.Barra__Buscar--inputSpan
+{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #efefef;
+    border-radius: 50px;
+    text-align: center;
 }
 
 .Barra__Buscar span
 {
-    background-color: black;
-    background-color: #DDD;
+    display: flex;
+    justify-content: center;
+    background-color: #efefef;
+
 }
 
 .Barra__Buscar input
@@ -71,12 +100,25 @@ header
     border: 0;
     color: #777;
     font-size: 15px;
-    background-color: #DDD;
+    background-color: #efefef;
 }
 
 .Barra__Menu li, .Barra__icons li
 {
     margin: 10px;
+}
+
+.Barra__Menu--NoActive a
+{
+    color: #000;
+}
+
+.Barra__Menu .Barra__Menu--NoActive:hover
+{
+    background: #efefef;
+    padding: 17px 10px;
+    border-radius: 30px;
+    margin-left: 0px;
 }
 
 .Barra__Buscar img
@@ -92,8 +134,8 @@ header
 
 .Barra__icons img
 {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
 }
 
@@ -101,14 +143,85 @@ header
 {
     border-radius: 100%;
     padding-right: 5px;
-} 
+}
+
+.Barra__icons .submenu
+{
+    width: 15px;
+    height: 15px;
+}
 
 .Principal
 {
     width: 90%;
     margin: 0 auto;
-    padding-top: 80px;
+    padding-top: 110px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
+    grid-auto-rows: auto;
+}
+
+.Principal__Card
+{
+    height: auto;
+    position: relative;
+    height: auto;
+}
+
+.Principal__Card--Oculto
+{
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
+.Principal__Card:hover .Principal__Card--Oculto
+{ 
+    display: block;
+}
+
+.Principal__Card--Oculto button
+{
+    background-color: #e84a24;
+    color: white;
+    padding: 10px 7px;
+    border-radius: 20px;
+    font-weight: 700;
+    border: 0;
+    position: absolute;
+    top: 5px;
+    right: 8px;
+}
+
+.Principal__Card--Oculto button:hover
+{
+    background-color: #c53e1e;
+}
+
+.Principal__Card--Oculto span img
+{
+    width: 20px;
+    height: 20px;
+    background-color: #FFF;
+    padding: 3px;
+    border-radius: 100%;
+}
+
+.Principal__Card--Oculto span:nth-of-type(1)
+{
+    position: absolute;
+    bottom: 5px;
+    right: 40px;
+}
+
+.Principal__Card--Oculto span:nth-of-type(2)
+{
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
 }
