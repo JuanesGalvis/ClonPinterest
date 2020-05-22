@@ -1,7 +1,8 @@
 body
 {
     padding: 0;
-    margin: 0;   
+    margin: 0;
+    position: relative;   
 }
 
 header
@@ -159,7 +160,6 @@ header
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
-    grid-auto-rows: auto;
 }
 
 .Principal__Card
@@ -167,6 +167,11 @@ header
     height: auto;
     position: relative;
     height: auto;
+}
+
+.Principal__Card img
+{
+    border-radius: 20px;
 }
 
 .Principal__Card--Oculto
@@ -178,6 +183,7 @@ header
     right: 0;
     bottom: 0;
     display: none;
+    border-radius: 20px;
 }
 
 .Principal__Card:hover .Principal__Card--Oculto
@@ -201,27 +207,86 @@ header
 .Principal__Card--Oculto button:hover
 {
     background-color: #c53e1e;
+    cursor: pointer;
 }
 
 .Principal__Card--Oculto span img
 {
     width: 20px;
     height: 20px;
-    background-color: #FFF;
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 3px;
     border-radius: 100%;
+    cursor: pointer;
+}
+
+.Principal__Card--Oculto span img:hover
+{
+    background-color: rgba(255, 255, 255, 1);
 }
 
 .Principal__Card--Oculto span:nth-of-type(1)
 {
     position: absolute;
-    bottom: 5px;
-    right: 40px;
+    bottom: 9px;
+    right: 45px;
 }
 
 .Principal__Card--Oculto span:nth-of-type(2)
 {
     position: absolute;
-    bottom: 5px;
-    right: 10px;
+    bottom: 9px;
+    right: 15px;
+}
+
+/* NIVELES DE LAS IMAGENES */
+.Nivel1
+{
+  grid-row-end: span 1;
+}
+
+.Nivel2
+{
+    grid-row-end: span 2;
+}
+
+.Nivel3
+{
+    grid-row-end: span 3;
+}
+
+.Nivel4
+{
+    grid-row-end: span 4;
+}
+
+.Nivel6
+{
+    grid-row-end: span 6;
+}
+
+.Opciones
+{
+    position: fixed;
+    bottom: 27px;
+    right: 26px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Opciones__Elemento
+{
+    padding: 6px 12px;
+    box-shadow: 0px 1px 1px 0px #AAA;
+    border-radius: 100%;
+    cursor: pointer;
+    font-size: 24px;
+    margin-top: 9px;
+    font-weight: 700;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.Opciones__Elemento:hover
+{
+    background-color: #efefef;
 }
