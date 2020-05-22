@@ -285,6 +285,7 @@ header
     margin-top: 9px;
     font-weight: 700;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #fff;
 }
 
 .Opciones__Elemento:hover
