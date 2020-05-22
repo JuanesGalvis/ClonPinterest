@@ -167,6 +167,7 @@ header
     height: auto;
     position: relative;
     height: auto;
+    margin: 5px;
 }
 
 .Principal__Card img
